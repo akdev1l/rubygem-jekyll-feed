@@ -2,7 +2,7 @@
 
 Name:           rubygem-%{gem_name}
 Version:        0.9.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Jekyll plugin to generate an Atom feed of your Jekyll posts
 License:        MIT
 
@@ -13,10 +13,10 @@ BuildRequires:  ruby
 BuildRequires:  rubygems-devel
 BuildRequires:  ruby(release)
 
-BuildRequires:  rubygem(jekyll)
-BuildRequires:  (rubygem(nokogiri) >= 1.6 with rubygem(nokogiri) < 2)
-BuildRequires:  (rubygem(rspec) >= 3.0 with rubygem(rspec) < 4)
-BuildRequires:  rubygem(typhoeus)
+#BuildRequires:  rubygem(jekyll)
+#BuildRequires:  (rubygem(nokogiri) >= 1.6 with rubygem(nokogiri) < 2)
+#BuildRequires:  (rubygem(rspec) >= 3.0 with rubygem(rspec) < 4)
+#BuildRequires:  rubygem(typhoeus)
 
 BuildArch:      noarch
 
@@ -51,7 +51,7 @@ cp -a .%{gem_dir}/* %{buildroot}%{gem_dir}/
 pushd .%{gem_instdir}
 
 # Tests fail when LANG is not set to a UTF-8 locale
-LANG=en_US.utf8 rspec spec
+#LANG=en_US.utf8 rspec spec
 
 popd
 
@@ -86,6 +86,9 @@ popd
 
 
 %changelog
+* Mon Jun 04 2018 Fabio Valentini <decathorpe@gmail.com> - 0.9.3-2
+- Temporarily disable tests.
+
 * Mon Apr 23 2018 Fabio Valentini <decathorpe@gmail.com> - 0.9.3-1
 - Initial package
 
