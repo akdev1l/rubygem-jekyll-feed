@@ -2,7 +2,7 @@
 
 Name:           rubygem-%{gem_name}
 Version:        0.11.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Jekyll plugin to generate an Atom feed of your Jekyll posts
 License:        MIT
 
@@ -51,7 +51,7 @@ cp -a .%{gem_dir}/* %{buildroot}%{gem_dir}/
 pushd .%{gem_instdir}
 
 # Tests fail when LANG is not set to a UTF-8 locale
-LANG=en_US.utf8 rspec spec
+LANG=C.UTF-8 rspec spec
 
 popd
 
@@ -86,6 +86,10 @@ popd
 
 
 %changelog
+* Sun Nov 18 2018 Zbigniew Jędrzejewski-Szmek <zbyszek@in.waw.pl> - 0.11.0-2
+- Use C.UTF-8 locale
+  See https://fedoraproject.org/wiki/Changes/Remove_glibc-langpacks-all_from_buildroot
+
 * Mon Sep 10 2018 Fabio Valentini <decathorpe@gmail.com> - 0.11.0-1
 - Update to version 0.11.0.
 
