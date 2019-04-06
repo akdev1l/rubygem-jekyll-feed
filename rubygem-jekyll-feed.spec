@@ -1,7 +1,7 @@
 %global gem_name jekyll-feed
 
 Name:           rubygem-%{gem_name}
-Version:        0.12.0
+Version:        0.12.1
 Release:        1%{?dist}
 Summary:        Jekyll plugin to generate an Atom feed of your Jekyll posts
 License:        MIT
@@ -87,6 +87,9 @@ popd
 
 
 %changelog
+* Sun Mar 31 2019 Fabio Valentini <decathorpe@gmail.com> - 0.12.1-1
+- Update to version 0.12.1.
+
 * Fri Mar 22 2019 Fabio Valentini <decathorpe@gmail.com> - 0.12.0-1
 - Update to version 0.12.0.
 
