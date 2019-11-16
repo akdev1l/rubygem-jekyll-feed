@@ -1,8 +1,8 @@
 %global gem_name jekyll-feed
 
 Name:           rubygem-%{gem_name}
-Version:        0.12.1
-Release:        2%{?dist}
+Version:        0.13.0
+Release:        1%{?dist}
 Summary:        Jekyll plugin to generate an Atom feed of your Jekyll posts
 License:        MIT
 
@@ -87,6 +87,9 @@ popd
 
 
 %changelog
+* Sat Nov 16 2019 Fabio Valentini <decathorpe@gmail.com> - 0.13.0-1
+- Update to version 0.13.0.
+
 * Fri Jul 26 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0.12.1-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
 
