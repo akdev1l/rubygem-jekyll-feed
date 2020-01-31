@@ -2,7 +2,7 @@
 
 Name:           rubygem-%{gem_name}
 Version:        0.13.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Jekyll plugin to generate an Atom feed of your Jekyll posts
 License:        MIT
 
@@ -15,6 +15,7 @@ BuildRequires:  ruby(release)
 
 BuildRequires:  rubygem(jekyll)
 BuildRequires:  (rubygem(nokogiri) >= 1.6 with rubygem(nokogiri) < 2)
+BuildRequires:  rubygem(racc)
 BuildRequires:  (rubygem(rspec) >= 3.0 with rubygem(rspec) < 4)
 BuildRequires:  rubygem(typhoeus)
 
@@ -87,6 +88,9 @@ popd
 
 
 %changelog
+* Fri Jan 31 2020 Fabio Valentini <decathorpe@gmail.com> - 0.13.0-3
+- Add BR: rubygem(racc) to fix FTBFS issue.
+
 * Thu Jan 30 2020 Fedora Release Engineering <releng@fedoraproject.org> - 0.13.0-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
 
