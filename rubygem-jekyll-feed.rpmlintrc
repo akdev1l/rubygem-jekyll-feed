@@ -1,2 +1,0 @@
-# false positives
-addFilter("E: zero-length /usr/share/gems/gems/jekyll-feed-*/spec/fixtures/feed.xslt.xml*")
