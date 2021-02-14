@@ -2,7 +2,7 @@
 
 Name:           rubygem-%{gem_name}
 Version:        0.15.1
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Jekyll plugin to generate an Atom feed of your Jekyll posts
 License:        MIT
 
@@ -18,6 +18,7 @@ BuildRequires:  (rubygem(jekyll) >= 3.7 with rubygem(jekyll) < 5.0)
 BuildRequires:  (rubygem(nokogiri) >= 1.6 with rubygem(nokogiri) < 2)
 BuildRequires:  (rubygem(rspec) >= 3.0 with rubygem(rspec) < 4)
 BuildRequires:  rubygem(typhoeus)
+BuildRequires:  rubygem(rss)
 
 BuildArch:      noarch
 
@@ -77,6 +78,9 @@ LANG=C.UTF-8 rspec spec
 
 
 %changelog
+* Sun Feb 14 2021 Otto Urpelainen <oturpe@iki.fi> - 0.15.1-3
+- Fix BuildRequires for Ruby 3.0
+
 * Wed Jan 27 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.15.1-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
 
