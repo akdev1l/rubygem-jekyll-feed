@@ -1,0 +1,5 @@
+/results_*
+/*.src.rpm
+
+/jekyll-feed-*.gem
+/jekyll-feed-*.tar.gz
