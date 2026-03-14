@@ -1,3 +1,4 @@
+%bcond_with bootstrap
 %global gem_name jekyll-feed
 
 Name:           rubygem-%{gem_name}
@@ -14,7 +15,11 @@ BuildRequires:  ruby >= 2.4.0
 BuildRequires:  rubygems-devel
 BuildRequires:  ruby(release)
 
+%if %{without bootstrap}
 BuildRequires:  (rubygem(jekyll) >= 3.7 with rubygem(jekyll) < 5.0)
+%else
+%global __requires_exclude jekyll
+%endif
 BuildRequires:  (rubygem(nokogiri) >= 1.6 with rubygem(nokogiri) < 2)
 BuildRequires:  (rubygem(rspec) >= 3.0 with rubygem(rspec) < 4)
 BuildRequires:  rubygem(typhoeus)
@@ -55,9 +60,11 @@ mkdir -p %{buildroot}%{gem_dir}
 cp -a .%{gem_dir}/* %{buildroot}%{gem_dir}/
 
 
+%if %{without bootstrap}
 %check
 # Tests fail when LANG is not set to a UTF-8 locale
 LANG=C.UTF-8 rspec spec
+%endif
 
 
 %files

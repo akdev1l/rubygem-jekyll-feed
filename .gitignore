@@ -1,5 +1,5 @@
 /results_*
 /*.src.rpm
+/noarch
+/.build*
 
-/jekyll-feed-*.gem
-/jekyll-feed-*.tar.gz
