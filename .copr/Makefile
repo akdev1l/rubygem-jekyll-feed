@@ -7,5 +7,5 @@ srpm:
 	cp \
 		--dereference \
 		--remove-destination \
-		*.patch *.gem *.tar.gz $(outdir)/
+		*.gem *.tar.gz $(outdir)/
 	ls -l $(outdir) $(PWD)
